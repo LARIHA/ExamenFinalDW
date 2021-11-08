@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{999D1E8F-810A-4845-A604-1A8CCAA0713A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>caminaconestilo</RootNamespace>
+    <AssemblyName>caminaconestilo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Content\productoesController.cs" />
+    <Compile Include="Controllers\clientesController.cs" />
+    <Compile Include="Controllers\comprasController.cs" />
+    <Compile Include="Controllers\devolucionsController.cs" />
+    <Compile Include="Controllers\entrada_x_ajusteController.cs" />
+    <Compile Include="Controllers\existenciasController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\productoesController.cs" />
+    <Compile Include="Controllers\proveedorsController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\cliente.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\compra.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\comprasController.cs" />
+    <Compile Include="Models\devolucion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\devolucionsController.cs" />
+    <Compile Include="Models\entrada_x_ajuste.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\entrada_x_ajusteController.cs" />
+    <Compile Include="Models\existencia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\existenciasController.cs" />
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\producto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\productoesController.cs" />
+    <Compile Include="Models\proveedor.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Segundo Parcial\index.html" />
+    <Content Include="Segundo Parcial\inicio.css" />
+    <Content Include="Segundo Parcial\pages\catalogos.html" />
+    <Content Include="Segundo Parcial\pages\css\cat.css" />
+    <Content Include="Segundo Parcial\pages\css\gesinv.css" />
+    <Content Include="Segundo Parcial\pages\css\login.css" />
+    <Content Include="Segundo Parcial\pages\css\masv.css" />
+    <Content Include="Segundo Parcial\pages\css\pro.css" />
+    <Content Include="Segundo Parcial\pages\gestioninventario.html" />
+    <Content Include="Segundo Parcial\pages\image\caminacone.jpg" />
+    <Content Include="Segundo Parcial\pages\image\catalogos\caballero.jpg" />
+    <Content Include="Segundo Parcial\pages\image\catalogos\dama.jpg" />
+    <Content Include="Segundo Parcial\pages\image\catalogos\infantil.jpg" />
+    <Content Include="Segundo Parcial\pages\image\catalogos\vcaballero.jpg" />
+    <Content Include="Segundo Parcial\pages\image\catalogos\vdama.jpg" />
+    <Content Include="Segundo Parcial\pages\image\catalogos\vinfantil.jpg" />
+    <Content Include="Segundo Parcial\pages\image\fondo.jpg" />
+    <Content Include="Segundo Parcial\pages\image\PNG.png" />
+    <Content Include="Segundo Parcial\pages\image\producto\cinco.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\cuatro.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\diez.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\doce.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\dos.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\nueve.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\ocho.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\once.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\seis.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\siete.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\tres.jpg" />
+    <Content Include="Segundo Parcial\pages\image\producto\uno.jpg" />
+    <Content Include="Segundo Parcial\pages\js\carrito.js" />
+    <Content Include="Segundo Parcial\pages\js\login.js" />
+    <Content Include="Segundo Parcial\pages\js\modificarcompras.js" />
+    <Content Include="Segundo Parcial\pages\js\mostrarcompras.js" />
+    <Content Include="Segundo Parcial\pages\js\mostrarventas.js" />
+    <Content Include="Segundo Parcial\pages\js\registrocompras.js" />
+    <Content Include="Segundo Parcial\pages\js\registroventas.js" />
+    <Content Include="Segundo Parcial\pages\log.html" />
+    <Content Include="Segundo Parcial\pages\masvendidos.html" />
+    <Content Include="Segundo Parcial\pages\modificarcompras.html" />
+    <Content Include="Segundo Parcial\pages\productos.html" />
+    <Content Include="Segundo Parcial\pages\registro.html" />
+    <Content Include="Segundo Parcial\pages\ventas.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\clientes\Create.cshtml" />
+    <Content Include="Views\clientes\Delete.cshtml" />
+    <Content Include="Views\clientes\Details.cshtml" />
+    <Content Include="Views\clientes\Edit.cshtml" />
+    <Content Include="Views\clientes\Index.cshtml" />
+    <Content Include="Views\proveedors\Create.cshtml" />
+    <Content Include="Views\proveedors\Delete.cshtml" />
+    <Content Include="Views\proveedors\Details.cshtml" />
+    <Content Include="Views\proveedors\Edit.cshtml" />
+    <Content Include="Views\proveedors\Index.cshtml" />
+    <Content Include="Views\productoes\Create.cshtml" />
+    <Content Include="Views\productoes\Delete.cshtml" />
+    <Content Include="Views\productoes\Details.cshtml" />
+    <Content Include="Views\productoes\Edit.cshtml" />
+    <Content Include="Views\productoes\Index.cshtml" />
+    <Content Include="Views\devolucions\Create.cshtml" />
+    <Content Include="Views\devolucions\Delete.cshtml" />
+    <Content Include="Views\devolucions\Details.cshtml" />
+    <Content Include="Views\devolucions\Edit.cshtml" />
+    <Content Include="Views\devolucions\Index.cshtml" />
+    <Content Include="Views\entrada_x_ajuste\Create.cshtml" />
+    <Content Include="Views\entrada_x_ajuste\Delete.cshtml" />
+    <Content Include="Views\entrada_x_ajuste\Details.cshtml" />
+    <Content Include="Views\entrada_x_ajuste\Edit.cshtml" />
+    <Content Include="Views\entrada_x_ajuste\Index.cshtml" />
+    <Content Include="Views\existencias\Create.cshtml" />
+    <Content Include="Views\existencias\Delete.cshtml" />
+    <Content Include="Views\existencias\Details.cshtml" />
+    <Content Include="Views\existencias\Edit.cshtml" />
+    <Content Include="Views\existencias\Index.cshtml" />
+    <Content Include="Views\compras\Create.cshtml" />
+    <Content Include="Views\compras\Delete.cshtml" />
+    <Content Include="Views\compras\Details.cshtml" />
+    <Content Include="Views\compras\Edit.cshtml" />
+    <Content Include="Views\compras\Index.cshtml" />
+    <Content Include="Segundo Parcial\.git\COMMIT_EDITMSG" />
+    <Content Include="Segundo Parcial\.git\config" />
+    <Content Include="Segundo Parcial\.git\description" />
+    <Content Include="Segundo Parcial\.git\HEAD" />
+    <Content Include="Segundo Parcial\.git\hooks\applypatch-msg.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\commit-msg.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\fsmonitor-watchman.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\post-update.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\pre-applypatch.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\pre-commit.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\pre-merge-commit.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\pre-push.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\pre-rebase.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\pre-receive.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\push-to-checkout.sample" />
+    <Content Include="Segundo Parcial\.git\hooks\update.sample" />
+    <Content Include="Segundo Parcial\.git\index" />
+    <Content Include="Segundo Parcial\.git\info\exclude" />
+    <Content Include="Segundo Parcial\.git\logs\HEAD" />
+    <Content Include="Segundo Parcial\.git\logs\refs\heads\master" />
+    <Content Include="Segundo Parcial\.git\logs\refs\remotes\origin\master" />
+    <Content Include="Segundo Parcial\.git\objects\0a\0f2b8a8be2e9082d6d33148bd898e2ca000a5b" />
+    <Content Include="Segundo Parcial\.git\objects\0a\a96893d1e99d88925627394bd1413816c87d15" />
+    <Content Include="Segundo Parcial\.git\objects\0c\3e85bc14d0131b14597db1dd350287a134e4d2" />
+    <Content Include="Segundo Parcial\.git\objects\0c\dc506cf55a79c0fafa8a41b412311bb498df79" />
+    <Content Include="Segundo Parcial\.git\objects\11\67a01bf0508f89753dc3665a3214c266b9d0c3" />
+    <Content Include="Segundo Parcial\.git\objects\18\240ff97eaa639f1fc34c642cde3ffa8823f212" />
+    <Content Include="Segundo Parcial\.git\objects\19\10c3d28843bb61c49d1099a3d832c4c9bd2960" />
+    <Content Include="Segundo Parcial\.git\objects\1e\c7ba495661052c2410be1105809a141e6a6ea7" />
+    <Content Include="Segundo Parcial\.git\objects\27\a6a172a76f0a297857eef0acf6e819ff510452" />
+    <Content Include="Segundo Parcial\.git\objects\28\b65764a0cbbde326770bd26330670c0fce6123" />
+    <Content Include="Segundo Parcial\.git\objects\2b\b53f58833e5dfaa27e4821c2cfebfe219d5504" />
+    <Content Include="Segundo Parcial\.git\objects\33\d32cca4019208f298c47c17f4c30cb2f421ce0" />
+    <Content Include="Segundo Parcial\.git\objects\3b\551f211183ed240416553a0735452b41ee2fed" />
+    <Content Include="Segundo Parcial\.git\objects\42\70b14b89fa960e724059ed449ad2ca698a2afd" />
+    <Content Include="Segundo Parcial\.git\objects\46\7b4697a2567b808823558e5a26ab1307ff0c8d" />
+    <Content Include="Segundo Parcial\.git\objects\58\7d745e139dfe5155703efd293db6e0dd3f54cd" />
+    <Content Include="Segundo Parcial\.git\objects\66\971aefb83e59b0aa958f1976e50abe4e280b06" />
+    <Content Include="Segundo Parcial\.git\objects\6b\6b015dd23031d70bc02b61381d712607fe0944" />
+    <Content Include="Segundo Parcial\.git\objects\6b\f82a52edf058840f0d3799ca57c5a0c6b47964" />
+    <Content Include="Segundo Parcial\.git\objects\73\2118088d243387faa19e18fb39e29fc53d2b8b" />
+    <Content Include="Segundo Parcial\.git\objects\7b\12966c98dba0ad4a6028c6b05b624b3f278227" />
+    <Content Include="Segundo Parcial\.git\objects\7c\bcf5591b71a9f14e475b4e068f19998648a184" />
+    <Content Include="Segundo Parcial\.git\objects\81\d971ef8e64273b80f1726b1678128ad22016e8" />
+    <Content Include="Segundo Parcial\.git\objects\83\2d0502d09d2cd80e4181f6979ae31efea98d50" />
+    <Content Include="Segundo Parcial\.git\objects\86\e706c73ab4c4dc76e518594e46ec918d9bb751" />
+    <Content Include="Segundo Parcial\.git\objects\8b\d793b5f6289211ae6b52c89af3742286b4eb27" />
+    <Content Include="Segundo Parcial\.git\objects\9e\7af2f9a8d01afb0e231505cd059b8bf3dce9c6" />
+    <Content Include="Segundo Parcial\.git\objects\a1\3da5eea5ecb28892f471867ca42ec3d1900d47" />
+    <Content Include="Segundo Parcial\.git\objects\b3\6510b55ddf25b5855ceaab05c250672b7279e2" />
+    <Content Include="Segundo Parcial\.git\objects\be\0002d505aeb56e57466b4f3cbbd74ab0d0718e" />
+    <Content Include="Segundo Parcial\.git\objects\be\9230037c45de80694cef1c365c762a8a5bd8a8" />
+    <Content Include="Segundo Parcial\.git\objects\c4\b13277a58fdb3cd05c8282832c5a5907fd6bfa" />
+    <Content Include="Segundo Parcial\.git\objects\cc\a97734cd42ea8f702ec776eb27b7fac3ce54d1" />
+    <Content Include="Segundo Parcial\.git\objects\ce\bb5e6a4804f7cacbef25d27943769b369322e5" />
+    <Content Include="Segundo Parcial\.git\objects\cf\d7c542a0dd33d69cc7c2ed5b60ecc48bcf0663" />
+    <Content Include="Segundo Parcial\.git\objects\d0\bb9d667f0633c1ad054cda85a1687834e29f47" />
+    <Content Include="Segundo Parcial\.git\objects\d6\e49d8c48767599445845d4c1b4ac5daee160c3" />
+    <Content Include="Segundo Parcial\.git\objects\da\6b2405d075063b01b32822dd548269ea1c6783" />
+    <Content Include="Segundo Parcial\.git\objects\db\603d2b8a5a28ed2901018ad769d355e8232ac2" />
+    <Content Include="Segundo Parcial\.git\objects\dc\f56dd2e53299caa2ffe3202865bf4cbce3df52" />
+    <Content Include="Segundo Parcial\.git\objects\dd\593f8e04371cf2c2480520aaa648f5625c482d" />
+    <Content Include="Segundo Parcial\.git\objects\e3\fc52b1dc04b9fd80cd1b4563b68ad4b1fa8251" />
+    <Content Include="Segundo Parcial\.git\objects\e4\14b3aa5a24114d4d76c56ac2a1a07f719fd10a" />
+    <Content Include="Segundo Parcial\.git\objects\ec\f9d9a957eaa0d749049726c655ee715ef9bdaa" />
+    <Content Include="Segundo Parcial\.git\objects\f2\07f956b3fe5e7baba2392f138dce1c3b91b30d" />
+    <Content Include="Segundo Parcial\.git\objects\f2\0b5366b5f29a24ec82689ad2c4984ad0b5d9d1" />
+    <Content Include="Segundo Parcial\.git\objects\f3\b3b347b6cea1bfb8012928cf5e3d9a1d90b2fb" />
+    <Content Include="Segundo Parcial\.git\objects\f5\ee37b7c6a7f5cbbc03544fe6d341672b0ee48e" />
+    <Content Include="Segundo Parcial\.git\objects\fc\1428c5d33b1d93523cfce25e1d8456dde6e835" />
+    <Content Include="Segundo Parcial\.git\objects\fd\d425adbc07101094300013e6edb6f0e1ff6b1c" />
+    <Content Include="Segundo Parcial\.git\objects\fe\d17dbcc9c2c627e342010d374957e16de965e6" />
+    <Content Include="Segundo Parcial\.git\refs\heads\master" />
+    <Content Include="Segundo Parcial\.git\refs\remotes\origin\master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Segundo Parcial\.git\objects\info\" />
+    <Folder Include="Segundo Parcial\.git\objects\pack\" />
+    <Folder Include="Segundo Parcial\.git\refs\tags\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50441</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50441/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="565eed47e8af4b12a68ffdcd9a729eca" Name="Diagram1">
+        <EntityTypeShape EntityType="camina_con_estiloModel.cliente" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="camina_con_estiloModel.compra" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="camina_con_estiloModel.devolucion" Width="1.5" PointX="8.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="camina_con_estiloModel.entrada_x_ajuste" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="camina_con_estiloModel.existencia" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="camina_con_estiloModel.producto" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="camina_con_estiloModel.proveedor" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="camina_con_estiloModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="camina_con_estiloModel.FK_compra_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="camina_con_estiloModel.FK_producto_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="camina_con_estiloModel.FK_devolucion_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="camina_con_estiloModel.FK_entrada_x_ajuste_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="camina_con_estiloModel.FK_existencia_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="camina_con_estiloModel.FK_producto_proveedor" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
